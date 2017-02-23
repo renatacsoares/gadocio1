@@ -1,0 +1,19 @@
+<ion-view title="Fazenda Selecionada" id="page16">
+    <ion-content padding="true" class="has-header">
+            <label class="item item-input">
+                <i class="icon ion-ios7-search placeholder-icon"></i>
+                <input type="search" placeholder="Pesquisar" ng-model="filtro">
+            </label>
+            <ion-list ng-repeat="fazendaSelecionada in fazendaSelecionada | filter:filtro">
+                <ion-item class="item-avatar">
+                    <img src="{{fazenda.img}}">
+                    <h2>Numero{{fazenda.numero}}</h2>
+                    <h2>Nome: {{fazenda.nome}}</h2>
+                    <h2>Tipo: {{animal.tipo}}</h2>
+                    <h3>Idade:{{animal.idade}}</h3>
+                    <h3>Peso:{{animal.peso}}</h3>
+                    <button class="button button-positive" style="border-radius:14px 14px 14px 14px; font-size: 16px; float: right" ng-click="animalSelecionado()">Selecionar</button>
+                </ion-item>
+            </ion-list>
+    </ion-content>
+</ion-view>
